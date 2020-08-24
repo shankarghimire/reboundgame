@@ -10,8 +10,39 @@ body{
 
 #playingArea{
     position: absolute;
-    border: 1px solid rgb(216,216,216);
+    border: 1px solid  rgb(0,0,0);
     top: 10px;
     left: 10px;
-    
+    background-color: rgb(216,216,216);
+}
+
+#ball{
+    position: absolute;
+    top: 8px;
+    left: 228px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: cornflowerblue;
+}
+
+#score{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 10px);
+    height: 30px;
+    color: #ffffff;
+    background-color: rgb(32,128, 64);
+    padding: 5px;
+}
+
+#paddle{
+    position: absolute;
+    bottom: 30px;
+    left: 228px;
+    width: 100px;
+    height: 25px;
+    background-color: coral;
+
 }
