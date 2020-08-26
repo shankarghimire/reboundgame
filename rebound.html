@@ -14,7 +14,25 @@
             Score: 0
         </div>
     </div>
-
+   <div id="controls">
+       <h3>Settings</h3>
+       <button id="new">New Game</button><br/>
+       <select size="1" name="difficulty" id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+       </select>
+       <br>
+       <fieldset>
+           <legend>Sounds</legend>
+           <input type="checkbox" id="snd">
+           <label for="snd">Effects</label> <br/>
+           <input type="checkbox" id="music">
+           <label for="music">Music</label> <br>
+       </fieldset>
+       <button id="done">Done</button>
+   </div> 
+   <button id="gear">&#9881</button>
     <script src="js/rebound.js"></script>
 </body>
 </html>
