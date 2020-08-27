@@ -10,6 +10,7 @@ var difficultySelect;
 var doneButton;
 var snd;
 var music;
+var exitButton;
 
 //variables to hold configured Information
 var aWidth; //to hold available width of the screen
@@ -27,6 +28,7 @@ var ballTop = 8;
 var drag = false;
 var sndEnabled = false;
 var musicEnabled = false;
+var isGameOver = false;
 
 var beepX;
 var beepY;
@@ -49,6 +51,7 @@ function init(){
     newButton = document.getElementById('new');
     difficultySelect = document.getElementById('difficulty');
     doneButton = document.getElementById('done');
+    exitButton = document.getElementById('exit');
     snd = document.getElementById('snd');
     music = document.getElementById('music');
 
@@ -90,6 +93,10 @@ function init(){
     gear.addEventListener('click',showSettings,false);
     newButton.addEventListener('click',newGame,false);
     doneButton.addEventListener('click',hideSettings,false);
+    exitButton.addEventListener('click',(e)=>{
+        alert("See you soon! \n" +"     ☺☺☺");
+        window.close();
+    },false);
     difficultySelect.addEventListener('change',function(){
         setDifficulty(difficultySelect.selectedIndex)
     },false);
@@ -299,10 +306,21 @@ function updateScore(){
 function showSettings(){
     controls.style.display = 'block';
     cancelAnimationFrame(timer);
+    if(isGameOver){
+        doneButton.disabled = true;
+    }
+    else{
+        doneButton.disabled = false;
+    }
+
+
 }
 function hideSettings(){
+    //alert("Testing done Button");
+    console.log("Testing doneButton!");
     controls.style.display = 'none';
     timer = requestAnimationFrame(startGame);
+
 }
 
 function setDifficulty(diff){
@@ -335,6 +353,7 @@ function newGame(){
     //alert("difficulty level: " + difficultySelect.selectedIndex );
     score.style.backgroundColor = 'rgb(32,128,64)';
     hideSettings();
+    isGameOver = false;
 }
 
 function toggleSound(){
@@ -410,4 +429,7 @@ function gameOver(){
     score.style.backgroundColor = 'rgb(255,0,0)';
     ball.style.display = "none";
     playSound(beepPaddle);
+    isGameOver = true;
+    showSettings();
+
 }
