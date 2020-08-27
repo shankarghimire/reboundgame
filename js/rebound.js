@@ -126,7 +126,7 @@ function layoutPage(){
     aWidth = window.innerWidth;
     aHeight = window.innerHeight;
     pWidth = aWidth - 20;
-    pHeight = aHeight - 20;
+    pHeight = aHeight - 50;
     playingArea.style.width = pWidth + 'px';
     playingArea.style.height = pHeight + 'px';
 
