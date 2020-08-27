@@ -82,8 +82,8 @@ function init(){
     playingArea.addEventListener('mousemove',mouseMove,false);
 
     //touch event
-    playingArea.addEventListener('toudhdown',mouseDown,false);
-    playingArea.addEventListener('touchup',mouseUp,false);
+    playingArea.addEventListener('touchstart',mouseDown,false);
+    playingArea.addEventListener('touchend',mouseUp,false);
     playingArea.addEventListener('touchmove',mouseMove,false);
     
     //gear controls
