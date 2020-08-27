@@ -97,13 +97,14 @@ function init(){
         alert("See you soon! \n" +"     ☺☺☺");
         window.close();
     },false);
+
     difficultySelect.addEventListener('change',function(){
         setDifficulty(difficultySelect.selectedIndex)
     },false);
+
     snd.addEventListener('click',toggleSound,false);
     music.addEventListener('click',toggleMusic,false);
 
-    
     //calls function setBallPosition
     setBallStartPosition();
     //start game animation
