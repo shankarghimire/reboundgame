@@ -30,7 +30,7 @@ body{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: calc(100% - 10px);
+    width: calc(100% - 0px);
     height: 40px;
     color: #ffffff;
     background-color: rgb(32,128, 64);
